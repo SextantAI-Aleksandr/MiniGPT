@@ -1,7 +1,9 @@
 body,h1,h5 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
+
 .bgimg {
-   /*See https://linuxhint.com/different-methods-to-darken-background-image-css/*/
+  /* Blend the backgroud image with a transparent color
+  See https://linuxhint.com/different-methods-to-darken-background-image-css/*/
   background-image: url('/images/pexels-johannes-plenio-1105379.jpg');
   background-color: rgb(90, 110, 130);
   background-blend-mode: multiply;
@@ -10,7 +12,8 @@ body, html {height: 100%}
   background-size: cover;
 }
 
-div.scroll {
+div.chatArea {
+  /*This sets a scrollbar on the central chat area*/
   height: 400px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -37,16 +40,23 @@ div.scroll {
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
-  border-radius: 5px;
+  border-radius: 9px;
   padding: 10px;
   margin: 10px 0;
 }
 
-/* Darker chat container */
-.darker {
+/* chat container for human response*/
+.respHuman {
   border-color: #ccc;
-  background-color: rgba(51, 51, 51, .2);
+  background-color: rgba(20, 20, 20, .4);
 }
+
+/* chat container for machine response*/
+.respMachine {
+  border-color: #ccc;
+  background-color: rgba(210, 210, 210, .3);
+}
+
 
 /* Clear floats */
 .container::after {
