@@ -6,8 +6,9 @@ from starlette.applications import Starlette
 from starlette.responses import JSONResponse
 from qa import SageQnA 
 
-sqa = SageQnA()
-app = Starlette()
+sqa = SageQnA()     # initiate a SageQnA instance
+app = Starlette()   # initiate a Starlette app
+req_no = 0          # initiate a request counter 
 
 
 @app.route("/")
@@ -17,7 +18,7 @@ async def homepage(request):
         return JSONResponse({ 'status': 400, 'message':'I have a question: What is your question?' })
     if not question.endswith('?'):
         question += '?'
-    answer = sqa.answer(question)
+    req_no, answer = sqa.answer(question)
     print('\nQ: {}'.format(question))
     print('A: {}'.format(answer))
-    return JSONResponse({ 'status': 200, 'message':answer })
+    return JSONResponse({ 'req_no': req_no, 'status': 200, 'message':answer })
