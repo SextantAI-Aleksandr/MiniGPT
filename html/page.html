@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MiniGPT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- Main Page -->
+<div class="bgimg w3-display-container w3-text-white">
+
+  <!--About button (top left)-->
+  <div class="w3-display-topleft w3-container w3-large">
+    <p><button onclick="document.getElementById('about').style.display='block'" class="w3-button w3-black">about</button></p>
+  </div>
+
+  <!--DialoGHT header (top lcenter)-->
+  <div class="w3-display-topmiddle">
+    <h2>DialoGPT Chat</h2>
+  </div>
+
+  <div class="w3-display-middle">
+
+    <div class="scroll">
+      <div class="container">
+        <img src="/w3images/bandmember.jpg" alt="Avatar">
+        <h1 class="ml2">Sunny mornings</h1>
+        <span class="time-right">11:00</span>
+      </div>
+
+      <div class="container darker">
+        <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+        <p>Hey! I'm fine. Thanks for asking!</p>
+        <span class="time-left">11:01</span>
+      </div>
+      <div class="container darker">
+        <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+        <p>Hey! I'm fine. Thanks for asking!</p>
+        <span class="time-left">11:01</span>
+      </div>
+      <div class="container darker">
+        <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+        <p>Hey! I'm fine. Thanks for asking!</p>
+        <span class="time-left">11:01</span>
+      </div>
+      <div class="container darker">
+        <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+        <p>Hey! I'm fine. Thanks for asking!</p>
+        <span class="time-left">11:01</span>
+      </div>
+      <div class="container darker">
+        <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+        <p>Hey! I'm fine. Thanks for asking!</p>
+        <span class="time-left">11:01</span>
+      </div>
+    </div>
+
+    <div class="container darker">
+      <div class="wrapper">
+        <div class="spinner-wrapper">
+          <div class="fading-circle"></div>
+          <div class="fading-circle"></div>
+          <div class="fading-circle"></div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="container">
+      <input type="text" id="question" name="question">
+    </div>
+
+  </div><!--End of middle dialog display-->
+
+  <!--Disclaimer (bottom-left)-->
+  <div class="w3-display-bottomleft">
+    <p>&nbsp; By using this service, you agree to the 
+      <a href="">Terms of Service</a> and 
+      <a href="">Privacy Policy</a>.
+    </p>
+  </div>
+
+
+    
+</div><!--End of main page-->
+
+<!-- About Modal -->
+<div id="about" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('about').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h3>About This Page</h3>
+    </div>
+    <div class="w3-container">
+      <p>This project was created to demonstrate a minimal webpage functionality that vaguely mimicked ChatGPT.
+        Some of the answers from the chat bot will seem insightful, many will seem silly.
+      </p>
+    </div>
+    <div class="w3-container w3-black">
+      <h4>About DialoGPT</h4>
+    </div>
+    <div class="w3-container">
+      <p>DialoGPT is an open-source project sponsored by Microsoft to enable "versatile, open-domain chatbots".
+        Check out the <a target="_blank" href="https://www.microsoft.com/en-us/research/project/large-scale-pretraining-for-response-generation/">project page</a>,
+        the associated <a target="_blank" href="https://github.com/microsoft/DialoGPT">GitHub repository</a>,
+        the <a target="_blank" href="https://huggingface.co/microsoft/DialoGPT-medium">model</a> hosted on HuggingFace
+        and this <a target="_blank" href="https://www.microsoft.com/en-us/research/uploads/prod/2019/11/1911.00536.pdf">technical paper</a>.
+      </p>
+    </div>
+    <div class="w3-container w3-black">
+      <h4>Credits</h4>
+    </div>
+    <div class="w3-container">
+      <p>Here are some of the other resources used to help generate this page:
+      </p>
+      <ul>
+        <li>A useful web css library from <a target="_blank" href="https://www.w3schools.com/">W3 Schools</a>.</li>
+        <li>The <a target="_blank" href="https://huggingface.co/">Huggingface</a> transformers library.</li>
+        <li>CSS + JS <a target="_blank" href="https://tobiasahlin.com/moving-letters/#2">letter effects</a> courtesy of Tobias Ahlin.</li>
+        <li>Background photo courtesy of <a target="_blank" href="https://www.pexels.com/@jplenio/">Yohannes Plenio</a> via Pexels.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script type="text/javascript" src="mini-gpt-script.js"></script>
+</html>
+

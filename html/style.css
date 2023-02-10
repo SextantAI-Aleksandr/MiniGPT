@@ -1,0 +1,107 @@
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+   /*See https://linuxhint.com/different-methods-to-darken-background-image-css/*/
+  background-image: url('/images/pexels-johannes-plenio-1105379.jpg');
+  background-color: rgb(90, 110, 130);
+  background-blend-mode: multiply;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+div.scroll {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/*Letter fly-in: from https://tobiasahlin.com/moving-letters/#2 */
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* Chat containers-
+   Modified from https://www.w3schools.com/howto/howto_css_chat.asp
+*/
+
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: rgba(51, 51, 51, .2);
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+
+
+/*https://codepen.io/juliangarnier/pen/VwKdEjm*/
+
+  
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-wrapper {
+  display: flex;
+}
+
+  .fading-circle {
+  height: 30px;
+  width: 30px;
+  border: 5px solid #FFF;
+  border-radius: 1000px;
+  position: absolute;
+  }
