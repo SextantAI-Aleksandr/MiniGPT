@@ -14,12 +14,21 @@ body, html {height: 100%}
 
 div.chatArea {
   /*This sets a scrollbar on the central chat area*/
-  height: 400px;
+  height: 60vh;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
   padding: 20px;
 }
+
+#question {
+  width: 100%;
+}
+
+#questionParent {
+  background-color: rgba(90, 110, 130, 0);
+}
+
 
 /*Letter fly-in: from https://tobiasahlin.com/moving-letters/#2 */
 .ml2 {
@@ -55,6 +64,7 @@ div.chatArea {
 .respMachine {
   border-color: #ccc;
   background-color: rgba(210, 210, 210, .3);
+  font-size: large;
 }
 
 
@@ -92,26 +102,3 @@ div.chatArea {
   float: left;
   color: #999;
 }
-
-
-
-/*https://codepen.io/juliangarnier/pen/VwKdEjm*/
-
-  
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.spinner-wrapper {
-  display: flex;
-}
-
-  .fading-circle {
-  height: 30px;
-  width: 30px;
-  border: 5px solid #FFF;
-  border-radius: 1000px;
-  position: absolute;
-  }
