@@ -4,7 +4,8 @@ function doAJAX(elementIdentifier, callback, requestURL, params) {
     // this function takes an elementID, a callback = f(elementIdentifier, response),
     // and a request URL. It will wait until the data from the request is ready to update
     // NOTE: elementIdentifier could be an element OR an elementID
-=    var xhr = new XMLHttpRequest();
+    console.log('CALLING AJAX:', requestURL);
+    var xhr = new XMLHttpRequest();
     xhr.withCredentials = false; // Firefox is way too pedantic about CORS
     xhr.onreadystatechange = function(e) { 
             if (xhr.readyState == 4 && xhr.status == 200) {
