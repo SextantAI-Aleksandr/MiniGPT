@@ -4,8 +4,7 @@ function doAJAX(elementIdentifier, callback, requestURL, params) {
     // this function takes an elementID, a callback = f(elementIdentifier, response),
     // and a request URL. It will wait until the data from the request is ready to update
     // NOTE: elementIdentifier could be an element OR an elementID
-    console.log('CALLING AJAX:', requestURL);
-    var xhr = new XMLHttpRequest();
+=    var xhr = new XMLHttpRequest();
     xhr.withCredentials = false; // Firefox is way too pedantic about CORS
     xhr.onreadystatechange = function(e) { 
             if (xhr.readyState == 4 && xhr.status == 200) {
@@ -40,6 +39,7 @@ function addToChat(message, req_no) {
     var box = document.createElement('div');            // this is the "bubble" box with one chat question/response
     var icon = document.createElement('img');           // the brain or person icon
     var para = document.createElement('p');
+    var dateSpan = document.createElement('span');
     // set variables to a default state for a human question....
     var respClass = 'respHuman'; 
     var iconSrc = 'images/human_icon.png';
@@ -48,6 +48,7 @@ function addToChat(message, req_no) {
     var delay = 0;
     var duration = 500
     var scale = 1;
+    var dateClass = 'time-right';
     if (req_no) {
         // ... and override them if this is a mahine response instead
         lastReqNo = req_no; // increment the global variable on machine response. This allows element identification for user questions that get no req_id from python 
@@ -58,6 +59,7 @@ function addToChat(message, req_no) {
         delay = 150;  // make it look like the machine has to think longer
         duration = 1000;
         scale = 6;    // make the letters really big and get smaller as they fly in
+        dateClass = 'time-left';
     }
     // finish applying things
     box.classList.add('container');                                         // apply W3 formatting rules
@@ -66,8 +68,14 @@ function addToChat(message, req_no) {
     icon.classList.add(iconClass);
     para.innerText = message;
     para.setAttribute('id', paraId);
+    var d = new Date();
+    var timeString = d.toLocaleTimeString();
+    dateSpan.innerText = timeString;
+    dateSpan.classList.add(dateClass);
+    // assign parents
     box.appendChild(icon);
     box.appendChild(para);
+    box.appendChild(dateSpan)
     chatArea.appendChild(box);
     // AFTER the box has been added to the chat area, make the text enter gradually with a cool effect
     chatArea.scrollTop = chatArea.scrollHeight;

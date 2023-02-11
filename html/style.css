@@ -58,6 +58,7 @@ div.chatArea {
 .respHuman {
   border-color: #ccc;
   background-color: rgba(20, 20, 20, .4);
+  font-size: large;
 }
 
 /* chat container for machine response*/
@@ -95,10 +96,12 @@ div.chatArea {
 .time-right {
   float: right;
   color: #aaa;
+  font-size: small;
 }
 
 /* Style time text */
 .time-left {
   float: left;
   color: #999;
+  font-size: small;
 }
